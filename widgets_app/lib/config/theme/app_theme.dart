@@ -9,7 +9,7 @@ const colorList = <Color>[
   Colors.deepOrange,
   Colors.pink,
   Colors.pinkAccent,
-  Colors.black,
+  Colors.grey,
   Colors.white24
 
 ];
