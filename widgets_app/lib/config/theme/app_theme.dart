@@ -17,7 +17,7 @@ const colorList = <Color>[
 class AppTheme {
   final int selectedColor;
 
-  AppTheme({this.selectedColor = 0}):assert(selectedColor >= 0, 'Selected color must be greater than zero'),
+  AppTheme({this.selectedColor = 3}):assert(selectedColor >= 0, 'Selected color must be greater than zero'),
   assert(selectedColor < colorList.length, 'Selected color must be less or equal than ${colorList.length - 1}');
 
   ThemeData getTheme() => ThemeData(
