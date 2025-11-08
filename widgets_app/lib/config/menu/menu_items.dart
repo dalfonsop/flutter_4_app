@@ -14,9 +14,24 @@ class MenuItem {
     required this.icon,
   });
 }
-  const 
- appMenuItems = <MenuItem> [
-  MenuItem(title: 'Botones',subtitle: 'Varios botones en flutter',link: '/buttons', icon: Icons.smart_button_outlined),
-  MenuItem(title: 'Tarjetas',subtitle: 'Contenedor estilizado',link: '/cards', icon: Icons.credit_card)
 
- ];
+const appMenuItems = <MenuItem>[
+  MenuItem(
+    title: 'Botones',
+    subtitle: 'Varios botones en flutter',
+    link: '/buttons',
+    icon: Icons.smart_button_outlined,
+  ),
+  MenuItem(
+    title: 'Tarjetas',
+    subtitle: 'Contenedor estilizado',
+    link: '/cards',
+    icon: Icons.credit_card,
+  ),
+  MenuItem(
+    title: 'ProgressIndicators',
+    subtitle: 'Generales y contorlados',
+    link: '/progress',
+    icon: Icons.refresh_rounded,
+  ),
+];
