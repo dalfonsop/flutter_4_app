@@ -44,11 +44,31 @@ class _BottomsView extends StatelessWidget {
             TextButton(onPressed: (){}, child: Text('Text button')),
             TextButton.icon(onPressed: (){}, label: Text('Text icon'),icon: Icon(Icons.stacked_line_chart_rounded),),
             IconButton(onPressed: (){}, icon: Icon(Icons.app_registration)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.app_registration),style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.amberAccent)),)
-
-
-
+            IconButton(onPressed: (){}, icon: Icon(Icons.app_registration),style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.amberAccent)),),
+            CustomButton()
           ],
+        ),
+      ),
+    );
+  }
+}
+
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadiusGeometry.circular(20),
+      child: Material(
+        color: Colors.deepOrange,
+        child: InkWell(
+          onTap: (){},
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+            child: Text('Hello world',style: TextStyle(color: Colors.white),),
+          ),
         ),
       ),
     );
