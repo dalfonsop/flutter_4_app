@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MenuItem {
   final String title;
@@ -33,5 +32,11 @@ const appMenuItems = <MenuItem>[
     subtitle: 'Generales y contorlados',
     link: '/progress',
     icon: Icons.refresh_rounded,
+  ),
+    MenuItem(
+    title: 'Snackbar y dialogs',
+    subtitle: 'Indicaores en pantallas',
+    link: '/snackbars',
+    icon: Icons.info_outline,
   ),
 ];
