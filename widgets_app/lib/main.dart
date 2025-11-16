@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:widgets_app/config/router/app_router.dart';
 import 'package:widgets_app/config/theme/app_theme.dart';
+import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp())
@@ -9,17 +10,19 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final selectedTheme = ref.watch(selectedColorProvider);
+    final isDarkMode= ref.watch(isDarkModeProvider);
     return MaterialApp.router(
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
       title: 'Widgets App',
-      theme: AppTheme().getTheme(),      
+      theme: AppTheme(selectedColor: selectedTheme , isDarkMode: isDarkMode ).getTheme(),      
     );
   }
 }
