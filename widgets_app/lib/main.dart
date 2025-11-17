@@ -13,7 +13,7 @@ void main() {
 class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of your application..
   @override
   Widget build(BuildContext context, ref) {
     final selectedTheme = ref.watch(selectedColorProvider);
